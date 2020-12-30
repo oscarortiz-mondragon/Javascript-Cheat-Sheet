@@ -1,0 +1,40 @@
+1. How to create a random number between 1 and 19
+Math.floor(Math.random()*20)
+
+2. How to create a random number with mins and max
+Math.floor(Math.random()*(max - min + 1)) + min
+
+3. Recursion (used when referencing the array to itself, like adding all values of an array)
+function recurse(arr,n){
+if(n <= 0)
+{return 1}
+else{
+return recurse(arr, n - 1) * arr[n - 1]
+}
+}
+
+4. Ternary Opertaion (When If statemts are too long)
+function tooLong(a , b){
+return a === b? "Equal" : "Not Equal"
+}
+
+5. Ternary with lots of Ifs
+functions lotsIfs(num){
+return num > 0? "positive
+: num < 0? "negative"
+: "zero"
+}
+
+6. use of recursion to count down
+function count(n){
+if(n < 1){
+return []
+}
+else{
+let countArray = count(n-1);
+countArray.push(n)
+return countArray
+}
+returns [1,2,3,4,5), if reverese needed, use unshift instead of push
+
+7. Recursion with set boundries
